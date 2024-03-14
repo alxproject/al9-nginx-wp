@@ -2,7 +2,7 @@ FROM docker.io/almalinux:9
 WORKDIR /usr/share/nginx/html
 COPY nginx-php-fpm /usr/local/sbin/
 RUN dnf install http://rpms.remirepo.net/enterprise/remi-release-9.rpm -y \
-    && dnf -y module install php:remi-8.1 \
+    && dnf -y module install php:remi-7.4 \
     && dnf -y module install nginx \
     && dnf -y install php-zip php-intl php-mysqlnd php-dom php-simplexml \
     php-xml php-xmlreader php-curl php-exif php-ftp php-gd php-iconv procps-ng \
